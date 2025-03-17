@@ -65,16 +65,20 @@ export class FruitlistComponent {
     },
   ]
   //creating a function to get index of each fruit on click in console
-  numLog(index: number) {
-    console.log(index);
-  }
+  // numLog(index: number) {
+  //   console.log(index);
+  // }
 
-  nameLog(name: string) {
-    console.log(name);
-  }
-
-  recieveSMS(sms: string) {
-    console.log(sms);
+  // nameLog(name: string) {
+  //   console.log(name);
+  // }
+  addComment(comment: string, index: number) { //takking comment for fruits from user[index confirm exact which fruit]
+    // console.log(comment, index);
+    this.fruitlist[index].reviews.push({
+      name: 'Adeel K.',
+      text: comment
+    })
     
   }
+  
 }

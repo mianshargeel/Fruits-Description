@@ -9,7 +9,8 @@
   <!-- use of @for-loop, $index is a contextual variable automatically provided by Angular's @for loop.It represents the index of the current item in the array being iterated. -->
     @for(singlefruit of fruitlist; track singlefruit.name; let index = $index){ 
 
-      <app-singlefruit (smsFromChild)="recieveSMS($event)" (fruitName)="nameLog($event)" (click)="numLog(index)" [fruit]="singlefruit"></app-singlefruit>
-      
+      <!-- <app-singlefruit  (click)="numLog(index)" [fruit]="singlefruit"></app-singlefruit> -->
+      <app-singlefruit  (fruitName)="addComment($event, index)" [fruit]="singlefruit"></app-singlefruit>
+
     }
 </div>

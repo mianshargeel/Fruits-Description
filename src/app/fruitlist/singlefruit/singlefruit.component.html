@@ -3,7 +3,7 @@
             <div>
               <!-- use of @if/@else -->
                 @if (fruit.stars > 1) { 
-                  <img (mouseover)=" sendSMSChild()" src="./../../assets/img/fruits/{{fruit.img}}" alt="" srcset="">
+                  <img src="./../../assets/img/fruits/{{fruit.img}}" alt="" srcset="">
                 } @else {
                   Fruit is not so papuplar
                 }
@@ -50,7 +50,15 @@
                             no comments available
                           }
                     </div>
-                    <div><input type="text"><button><img (click)="emitName()" src="./../../assets/img/arrow-35-32.png" alt="" srcset=""></button>
+                    <!-- What is [(ngModel)]?
+                      [(ngModel)] is a directive provided by Angular's FormsModule.It is commonly used with form elements like <input>, <textarea>, and <select>.The [()] syntax is called banana-in-a-box and represents two-way data binding. How Does [(ngModel)] Work? 
+From Component to View (One-Way Binding):
+When the value of inputData changes in the component, the input field in the UI is automatically updated.
+From View to Component (One-Way Binding):
+When the user types into the input field, the value of inputData in the component is automatically updated.
+Two-Way Binding:
+Combines both of the above. Changes in the component are reflected in the UI, and changes in the UI are reflected in the component.-->
+                    <div><input [(ngModel)]="inputData" type="text"><button><img (click)="sendInputData()" src="./../../assets/img/arrow-35-32.png" alt="" srcset=""></button>
                     </div>
                 </div>
             </div>
