@@ -64,4 +64,9 @@ export class FruitlistComponent {
       reviews:[{name: "Kevin W.", text: "Ganz gut in der Regel!"},{name: "Oliver J.", text: "Absoluter Favorit beim Frühstück"}],
     },
   ]
+  //creating a function to get index of each fruit on click in console
+  numLog(index: number) {
+    console.log(index);
+    
+  }
 }
