@@ -3,7 +3,7 @@
             <div>
               <!-- use of @if/@else -->
                 @if (fruit.stars > 1) { 
-                  <img src="./../../assets/img/fruits/{{fruit.img}}" alt="" srcset="">
+                  <img (mouseover)=" sendSMSChild()" src="./../../assets/img/fruits/{{fruit.img}}" alt="" srcset="">
                 } @else {
                   Fruit is not so papuplar
                 }
@@ -50,7 +50,7 @@
                             no comments available
                           }
                     </div>
-                    <div><input type="text"><button><img src="./../../assets/img/arrow-35-32.png" alt="" srcset=""></button>
+                    <div><input type="text"><button><img (click)="emitName()" src="./../../assets/img/arrow-35-32.png" alt="" srcset=""></button>
                     </div>
                 </div>
             </div>

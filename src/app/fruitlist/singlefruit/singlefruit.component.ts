@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-singlefruit',
@@ -16,5 +16,21 @@ export class SinglefruitComponent {
       genus: "Kernobstgewächsen innerhalb der Familie der Rosengewächse",
       stars: 2.3,
       reviews:[{name: "Kevin W.", text: "ist lecker"},{name: "Arne P.", text: "nicht so meins"}],
-    }; 
+  }; 
+
+
+  //1-@Output() to communitcatio from child comp to parent compo
+  @Output() fruitName = new EventEmitter<string>();// Output property
+  //creating a function to emit
+  emitName() {
+    this.fruitName.emit(this.fruit.name);// Emit an event with data
+  }
+  //2-practicing @Output()
+  @Output() smsFromChild = new EventEmitter<string>();
+  sendSMSChild() {
+    this.smsFromChild.emit(`I am ${this.fruit.name} from Child Component`);
+  }
+
+  inputData = '';
+  send
 }

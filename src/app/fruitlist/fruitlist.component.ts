@@ -67,6 +67,14 @@ export class FruitlistComponent {
   //creating a function to get index of each fruit on click in console
   numLog(index: number) {
     console.log(index);
+  }
+
+  nameLog(name: string) {
+    console.log(name);
+  }
+
+  recieveSMS(sms: string) {
+    console.log(sms);
     
   }
 }
