@@ -1,0 +1,13 @@
+<!-- <p>fruitlist works! {{fruitlist[0].description}}</p> -->
+ <!-- for loop in Angular -->
+
+ <!-- @for (item of fruitlist; track item.name; let last = $first) {
+  <p> {{last}} {{item.name}}</p>
+ } -->
+
+ <div class="fruitlist_content">
+  <!-- use of @for-loop, $index is a contextual variable automatically provided by Angular's @for loop.It represents the index of the current item in the array being iterated. -->
+    @for(singlefruit of fruitlist; track singlefruit.name; let index = $index){ 
+      <app-singlefruit [fruit]="singlefruit"></app-singlefruit>
+    }
+</div>
